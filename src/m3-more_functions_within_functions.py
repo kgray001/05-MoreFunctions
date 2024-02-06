@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (6 pts)
+# DONE: 1. (6 pts)
 #
 #   In this module, we are going to start the process of making our own
 #   calculator. It is going to be a very simple calculator, because the user
@@ -27,9 +27,29 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def add(num1, num2):
+    result = num1 + num2
+    return result
+
+def subtract(num1, num2):
+    result = num1 - num2
+    return result
+
+def multiply(num1, num2):
+    result = num1*num2
+    return result
+
+def divide(num1, num2):
+    result = num1 / num2
+    return result
+
+def math_atan2(num1, num2):
+    import math
+    result = math.atan2(num1, num2)
+    return result
 
 ###############################################################################
-# TODO: 2. (8 pts)
+# DONE: 2. (8 pts)
 #
 #   Now we need a function that will act as the control unit. It will ask the
 #   user for inputs and call the math functions.
@@ -59,9 +79,20 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def main():
+    print("Hello! Today is a beauuuutiful day!")
+    num1 = float(input("What would you like your first number to be?"))
+    num2 =  float(input("What would you like your second number to be?"))
+    a1 = add(num1, num2)
+    s1 = subtract(num1, num2)
+    m1 = multiply(num1, num2)
+    d1 = divide(num1, num2)
+    t1 = math_atan2(num1, num2)
+    print(f"Add: {a1}\nSubtract: {s1}\nMultiply: {m1}\nDivide: {d1}\nArc Tangent: {t1}")
+main()
 
 ###############################################################################
-# TODO: 3. EXTRA CREDIT (4 pts)
+# DONE: 3. EXTRA CREDIT (4 pts)
 #
 #   For this _TODO_, do NOT write your code beneath it. You will be modifying
 #   your code above. This is extra credit, so you don't need to complete this
